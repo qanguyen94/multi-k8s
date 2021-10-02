@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: quocnguyen-apps-de-tls
+spec:
+  secretName: quocnguyen-apps.de
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: quocnguyen-apps.de
+  dnsNames:
+    - quocnguyen-apps.de
+    - www.quocnguyen-apps.de
